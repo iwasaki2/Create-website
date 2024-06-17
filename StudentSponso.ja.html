@@ -131,30 +131,31 @@
 
 /* ボディのスタイル */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Georgia', serif;
     line-height: 1.6;
-    color: #333; /* テキストを濃いグレーに */
-    background-color: #f9f9f9; /* 背景色を薄いグレーに */
-    padding: 20px; /* ボディに少しパディングを追加 */
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
 }
 
 /* ヘッダーのスタイル */
 header {
-    background-color: #333; /* ダークグレー */
+    background-color: #1f1f1f;
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    border-bottom: 3px solid  hsl(49, 28%, 44%);;
 }
 
-.container {
-    width: 90%;
-    margin: 0 auto;
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 nav ul {
     list-style: none;
-    text-align: center; /* ナビゲーションを中央寄せに */
-    padding: 10px 0; /* ナビゲーションにパディングを追加 */
+    text-align: center;
+    padding: 10px 0;
 }
 
 nav ul li {
@@ -165,75 +166,83 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.2em;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color:  hsl(49, 28%, 44%);
 }
 
 /* セクションのスタイル */
 section {
     padding: 50px 0;
     background-color: #fff;
-    margin-bottom: 20px; /* セクション間にスペースを追加 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 軽いシャドウを追加 */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #about {
-    background-color: #eaeaea; /* 薄いグレーの背景色 */
+    background-color: hsl(49, 28%, 44%);
 }
 
-.container h2 {
-    margin-bottom: 15px;
-    color: #333; /* テキストを濃いグレーに */
-    text-align: center; /* 見出しを中央寄せに */
-}
-
-.container p {
+#about h2 {
+    font-size: 2em;
+    color: #fff;
     text-align: center;
-    color: #666; /* テキストをやや薄いグレーに */
-    margin: 0 auto;
-    max-width: 800px; /* 説明文の幅を制限 */
 }
 
+#about p {
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 1.2em;
+}
+
+/* プロジェクトカードのスタイル */
 .project-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* プロジェクトカードを均等に配置 */
+    justify-content: space-around;
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: #ecf0f1;
     padding: 20px;
     margin: 10px;
-    border: 1px solid #ddd; /* 薄いグレーのボーダー */
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     width: calc(100% / 3 - 20px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 軽いシャドウを追加 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
 }
 
 .project-card h3 {
     margin-bottom: 10px;
-    color: #333; /* テキストを濃いグレーに */
+    color: #2c3e50;
 }
 
 .project-card p {
     margin-bottom: 15px;
-    color: #666; /* テキストをやや薄いグレーに */
+    color: #7f8c8d;
 }
 
 .project-card button {
-    background-color: #333; /* ダークグレー */
+    background-color:  hsl(49, 28%, 44%);;
     color: #fff;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
 .project-card button:hover {
-    background-color: #555; /* ホバー時の色を少し濃く */
+    background-color:  hsl(49, 28%, 44%);;
 }
 
 /* フォームのスタイル */
@@ -253,13 +262,31 @@ form input, form textarea {
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 3px;
+    border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
 }
 
 form button {
-    background-color: #333;
+    background-color: #1f1f1f;
     color: #fff;
-    border:
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
 
+form button:hover {
+    background-color: #333;
+}
+
+/* フッターのスタイル */
+footer {
+    background-color: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 3px solid  hsl(49, 28%, 44%);
+}
+</style>
