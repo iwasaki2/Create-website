@@ -9,7 +9,7 @@ jobs:
       - uses: Dylan700/sftp-upload-action@latest
         with:
           server: iis.edu.tama.ac.jp
-          username: ytworks
+          username: u223iwasaki
           key: ${{secrets.SSH_PRIVATE_KEY}}
           port: 22
           uploads: |
