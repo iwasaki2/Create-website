@@ -1,0 +1,17 @@
+on: push
+name: Publish Website
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Dylan700/sftp-upload-action@latest
+        with:
+          server: iis.edu.tama.ac.jp
+          username: ytworks
+          key: ${{secrets.SSH_PRIVATE_KEY}}
+          passphrase: ${{secrets.SSH_PASSPHRASE}}
+          port: 22
+          uploads: |
+            ./html/ => ./public_html/
