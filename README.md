@@ -16,6 +16,8 @@
 
 制作物によって出資者がクリエイターに出資する。
 
+法律的な問題を秋学期に聞く
+
 <img width="1024" alt="image" src="https://github.com/user-attachments/assets/001abd31-7631-4a2b-951c-581d99f1b344">
 
 
