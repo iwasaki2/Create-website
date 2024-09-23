@@ -26,9 +26,29 @@
         }
         .header-container {
             flex: 1;
+            position: relative;
         }
+        .curimatch {
+            font-size: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .curimatch:nth-child(1) { top: 0px; left: -48px; }
+        .curimatch:nth-child(2) { top: -8px; left: -53px; }
+        .curimatch:nth-child(3) { top: -15px; left: -58px; }
+        .curimatch:nth-child(4) { top: -20px; left: -60px; }
+        .curimatch:nth-child(5) { top: -25px; left: -62px; }
+        .curimatch:nth-child(6) { top: -20px; left: -63px; }
+        .curimatch:nth-child(7) { top: -15px; left: -67px; }
+        .curimatch:nth-child(8) { top: -10px; left: -71px; }
+        .curimatch:nth-child(9) { top: 0px; left: -76px; }
+        
         .nav-right {
-            margin-left: auto;
+            margin-left: auto; /* 右寄せ */
+            margin-top: -50px; /* 上下の位置を調整 */
+            margin-right: 150px; /* 右側の余白を追加 */
+            padding-top: 0px; /* 上側の余白を追加 */
         }
         .nav-right ul {
             display: flex;
@@ -36,7 +56,7 @@
             padding: 0;
         }
         .nav-right ul li {
-            margin-left: 20px;
+            margin-left: 50px;
         }
         .nav-right ul li a {
             color: #0f0f0f;
@@ -54,10 +74,19 @@
     </style>
 </head>
 <body>
-    <header>
+    <header>       
         <div class="header-container">
-            <h1>CURIMATCH</h1>
+            <span class="curimatch" style="transform: rotate(-25deg);">C</span>
+            <span class="curimatch" style="transform: rotate(-20deg);">U</span>
+            <span class="curimatch" style="transform: rotate(-15deg);">R</span>
+            <span class="curimatch" style="transform: rotate(-10deg);">I</span>
+            <span class="curimatch" style="top: -22px;">M</span> <!-- Mを一番上に配置 -->
+            <span class="curimatch" style="transform: rotate(6deg);">A</span>
+            <span class="curimatch" style="transform: rotate(15deg);">T</span>
+            <span class="curimatch" style="transform: rotate(20deg);">C</span>
+            <span class="curimatch" style="transform: rotate(25deg);">H</span>
         </div>
+
         <nav class="nav-right">
             <ul>
                 <li><a href="index.html">ABOUT</a></li>
