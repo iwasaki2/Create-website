@@ -34,17 +34,23 @@
             display: inline-block;
         }
         
-        .curimatch:nth-child(1) { top: 0px; left: -48px; }
-        .curimatch:nth-child(2) { top: -8px; left: -53px; }
-        .curimatch:nth-child(3) { top: -15px; left: -58px; }
-        .curimatch:nth-child(4) { top: -20px; left: -60px; }
-        .curimatch:nth-child(5) { top: -25px; left: -62px; }
-        .curimatch:nth-child(6) { top: -20px; left: -63px; }
-        .curimatch:nth-child(7) { top: -15px; left: -67px; }
-        .curimatch:nth-child(8) { top: -10px; left: -71px; }
-        .curimatch:nth-child(9) { top: 0px; left: -76px; }
+        .curimatch:nth-child(1) { top: 0px; left: -38px; }  /* 43pxから5px増やす */
+        .curimatch:nth-child(2) { top: -8px; left: -43px; } /* 48pxから5px増やす */
+        .curimatch:nth-child(3) { top: -15px; left: -48px; } /* 53pxから5px増やす */
+        .curimatch:nth-child(4) { top: -20px; left: -50px; } /* 55pxから5px増やす */
+        .curimatch:nth-child(5) { top: -25px; left: -52px; } /* 57pxから5px増やす */
+        .curimatch:nth-child(6) { top: -20px; left: -53px; } /* 58pxから5px増やす */
+        .curimatch:nth-child(7) { top: -15px; left: -57px; } /* 62pxから5px増やす */
+        .curimatch:nth-child(8) { top: -10px; left: -61px; } /* 66pxから5px増やす */
+        .curimatch:nth-child(9) { top: 0px; left: -66px; } /* 71pxから5px増やす */
         
-
+        
+        .container {
+            position: relative; /* 相対位置を設定 */
+            width: 100%; /* 幅を100%に */
+            height: 100vh; /* 高さを画面全体に設定 */
+        }
+            
 
         .nav-right {
             margin-left: auto; /* 右寄せ */
@@ -67,12 +73,67 @@
         .nav-right ul li a:hover {
             color: hsl(49, 28%, 44%);
         }
-        footer {
-            background-color: #1f1f1f;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
+        h2 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #0f0f0f;
+            text-align: left;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 20px auto 20px auto;
+            margin-left: 20px; /* 左に30px動かす */
+            font-weight: 200; 
         }
+        h3 {
+            font-size: 2rem;
+            color: #333;
+            text-align: left;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto 20px auto; /* 上下のマージンと中央寄せ */
+            font-weight: 1000; 
+            margin-left: 130px; /* 左に30px動かす */
+        }
+        .description {
+        position: relative; /* 相対位置を設定 */
+        line-height: 1.8; /* 行間を調整 */
+        margin: 0; /* マージンを0に設定 */
+        padding: 20px; /* 全体の余白を設定 */
+        text-align: left; /* 文字を右寄せ */
+    }
+        .text-large {
+        font-size: 20px; /* 大きい文字サイズ */
+        color: #000000; /* 文字色 */
+        position: absolute; /* 絶対位置を設定 */
+        bottom: 200px; /* 下からの位置を調整 */
+        right: 150px; /* 右からの位置を調整 */
+    }
+            
+        footer {
+            background-color: #0c0c0c; /* フッターの背景色 */
+            position: fixed; /* 画面の一番下に固定 */
+            left: 0; /* 左側を0に設定 */
+            bottom: 0; /* 下側を0に設定 */
+            width: 100%; /* 幅を100%に */
+            text-align: center; /* テキストを中央に配置 */
+            padding: 0; /* 上下左右の余白を0に */
+            margin: 0; /* マージンも0に */
+            height: 30px; /* フッターの高さを指定 */
+        }
+     
+        .footer-text {
+            color: #ffffff; /* テキストの色 */
+            font-size: 14px; /* フォントサイズ */
+            margin: 0; /* マージンを0に */
+            max-width: 600px; /* テキストの最大幅を設定 */
+            width: 100%; /* 幅を100%に設定 */
+            display: inline-block; /* インラインブロック要素として表示 */
+            text-align: center; /* テキストを中央に配置 */
+            line-height: 1; /* 行の高さを小さくする */
+            transform: translateY(-20px); /* Y方向に上に移動 */
+        }
+            
+            
     </style>
 </head>
 <body>
@@ -100,11 +161,19 @@
         </nav>
     </header>
 
-    <h2>FUTURES</h2>
-    <p>ここにFUTURESの内容を追加します。</p>
-
-    <footer>
-        <p>&copy; 2024 CURIMATCH. All rights reserved.</p>
-    </footer>
+    <h2>_FUTURES</h2>
+    <h3>芸術で社会を<span style="color: rgb(236, 81, 81);">明るく</span>する。<h3>
+        <p class="description text-large">
+            Curimatch は、<br>
+            未来を担う芸術家とクリエイターの発掘·支援に情熱を注ぎ、<br>
+            文化の継承と革新を促進することで、社会に貢献します。<br>
+            私たちは、従来の枠にとらわれない斬新な発想と<br>
+            情熱に満ちた表現力を持つ芸術家やクリエイターを支援することで、<br>
+            彼らが真のポテンシャルを発揮できる環境を創造します。
+        </p>        
+        <footer>
+            <p class="footer-text">&copy; 2024 CURIMATCH. All rights reserved.</p>
+        </footer>
+        
 </body>
 </html>
