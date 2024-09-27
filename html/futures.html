@@ -29,21 +29,20 @@
             position: relative;
         }
         .curimatch {
-            font-size: 2rem;
+            font-size: 2.5rem;
             position: relative;
             display: inline-block;
         }
         
-        .curimatch:nth-child(1) { top: 0px; left: -38px; }  /* 43pxから5px増やす */
-        .curimatch:nth-child(2) { top: -8px; left: -43px; } /* 48pxから5px増やす */
-        .curimatch:nth-child(3) { top: -15px; left: -48px; } /* 53pxから5px増やす */
-        .curimatch:nth-child(4) { top: -20px; left: -50px; } /* 55pxから5px増やす */
-        .curimatch:nth-child(5) { top: -25px; left: -52px; } /* 57pxから5px増やす */
-        .curimatch:nth-child(6) { top: -20px; left: -53px; } /* 58pxから5px増やす */
-        .curimatch:nth-child(7) { top: -15px; left: -57px; } /* 62pxから5px増やす */
-        .curimatch:nth-child(8) { top: -10px; left: -61px; } /* 66pxから5px増やす */
-        .curimatch:nth-child(9) { top: 0px; left: -66px; } /* 71pxから5px増やす */
-        
+        .curimatch:nth-child(1) { top: 4px; left: -18px; }  /* top: 24px から 20 減少 */
+        .curimatch:nth-child(2) { top: -8px; left: -23px; }  /* top: 12px から 20 減少 */
+        .curimatch:nth-child(3) { top: -15px; left: -28px; }  /* top: 5px から 20 減少 */
+        .curimatch:nth-child(4) { top: -20px; left: -30px; }  /* top: 0px から 20 減少 */
+        .curimatch:nth-child(5) { top: -20px; left: -32px; }  /* top: 0px から 20 減少 */
+        .curimatch:nth-child(6) { top: -20px; left: -33px; }  /* top: 0px から 20 減少 */
+        .curimatch:nth-child(7) { top: -15px; left: -37px; }  /* top: 5px から 20 減少 */
+        .curimatch:nth-child(8) { top: -10px; left: -41px; }  /* top: 10px から 20 減少 */
+        .curimatch:nth-child(9) { top: 0px; left: -46px; }  /* top: 20px から 20 減少 */
         
         .container {
             position: relative; /* 相対位置を設定 */
@@ -96,13 +95,13 @@
             text-align: left;      /* テキストを中央寄せ */
             font-weight: 20;      /* フォントの太さをboldに */
             padding: 0px 0;  
-            margin-left: 60px;  
-            margin-top: -40px;
+            margin-left: 100px;  
+            margin-top: -50px;
         }
 
         .description {
         position: relative; /* 相対位置を設定 */
-        line-height: 1.8; /* 行間を調整 */
+        line-height: 1.5; /* 行間を調整 */
         margin: 0; /* マージンを0に設定 */
         padding: 20px; /* 全体の余白を設定 */
         text-align: left; /* 文字を右寄せ */
@@ -111,10 +110,14 @@
         font-size: 20px; /* 大きい文字サイズ */
         color: #000000; /* 文字色 */
         position: absolute; /* 絶対位置を設定 */
-        bottom: 200px; /* 下からの位置を調整 */
+        bottom: 120px; /* 下からの位置を調整 */
         right: 150px; /* 右からの位置を調整 */
         font-weight: 200; /* 文字を太くする */
     }
+        
+
+        
+    
             
         footer {
             background-color: #0c0c0c; /* フッターの背景色 */
@@ -148,9 +151,9 @@
         <div class="header-container">
             <span class="curimatch" style="transform: rotate(-25deg);">C</span>
             <span class="curimatch" style="transform: rotate(-20deg);">U</span>
-            <span class="curimatch" style="transform: rotate(-15deg);">R</span>
+            <span class="curimatch" style="transform: rotate(-12deg);">R</span>
             <span class="curimatch" style="transform: rotate(-10deg);">I</span>
-            <span class="curimatch" style="top: -22px;">M</span> <!-- Mを一番上に配置 -->
+            <span class="curimatch" style="top: -21px;">M</span> <!-- Mを一番上に配置 -->
             <span class="curimatch" style="transform: rotate(6deg);">A</span>
             <span class="curimatch" style="transform: rotate(15deg);">T</span>
             <span class="curimatch" style="transform: rotate(20deg);">C</span>
