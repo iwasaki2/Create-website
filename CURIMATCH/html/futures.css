@@ -161,3 +161,6 @@ footer {
     display: inline-block;
     text-align: center;
 }
+.highlight {
+    color: red;
+}
