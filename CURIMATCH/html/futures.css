@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* ボディスタイルの設定 */
 body {
     font-family: 'Georgia', serif;
     line-height: 1.6;
@@ -12,6 +13,7 @@ body {
     padding: 20px;
 }
 
+/* ヘッダーの設定：Flexboxを使用 */
 header {
     display: flex;
     justify-content: space-between;
@@ -20,45 +22,75 @@ header {
     padding: 20px 40px;
 }
 
+/* ヘッダーコンテナ内の文字を横並びにする設定 */
 .header-container {
-    flex: 1;
+    display: flex; /* Flexboxで横並び */
+    justify-content: center; /* 中央揃え */
+    align-items: flex-end; /* 下端で揃える */
     position: relative;
+    left: -40px; /* 左に移動 */
+    top: -40px;  /* 上に移動 */
 }
 
+/* curimatchクラスを使って各文字のスタイルを設定 */
 .curimatch {
     font-size: 2.5rem;
-    position: relative;
+    margin: 0 0px; /* 文字間のスペースをゼロにする */
+    letter-spacing: -1px; /* 文字同士をさらに詰める */
     display: inline-block;
+    position: relative;
+    transform-origin: bottom center; /* 各文字が底辺を基準に回転 */
 }
 
-.curimatch:nth-child(1) { top: 4px; left: -18px; }
-.curimatch:nth-child(2) { top: -8px; left: -23px; }
-.curimatch:nth-child(3) { top: -15px; left: -28px; }
-.curimatch:nth-child(4) { top: -20px; left: -30px; }
-.curimatch:nth-child(5) { top: -20px; left: -32px; }
-.curimatch:nth-child(6) { top: -20px; left: -33px; }
-.curimatch:nth-child(7) { top: -15px; left: -37px; }
-.curimatch:nth-child(8) { top: -10px; left: -41px; }
-.curimatch:nth-child(9) { top: 0px; left: -46px; }
+/* 各文字の回転と位置の設定 */
+.curimatch:nth-child(1) {
+    transform: rotate(-25deg) translateY(32px); /* 左端の文字、強く回転し低く配置 */
+    margin-right: 3px; /* 文字の右側に余白を追加 */
+}
+.curimatch:nth-child(2) {
+    transform: rotate(-20deg) translateY(20px); /* 少し少なめの回転と低い配置 */
+}
+.curimatch:nth-child(3) {
+    transform: rotate(-15deg) translateY(10px); /* 中央に近づくにつれ回転が小さく */
+}
+.curimatch:nth-child(4) {
+    transform: rotate(-10deg) translateY(5px); /* 軽い回転で少し上 */
+}
+.curimatch:nth-child(5) {
+    transform: rotate(0deg) translateY(4px); /* "M" は中央で回転なし */
+}
+.curimatch:nth-child(6) {
+    transform: rotate(8deg) translateY(5px); /* 左側と対称に設定 */
+}
+.curimatch:nth-child(7) {
+    transform: rotate(14deg) translateY(10px); /* 回転が少し大きくなり、位置も下がる */
+}
+.curimatch:nth-child(8) {
+    transform: rotate(20deg) translateY(18px);
+    margin-right: 3px; /* 8番目の文字の右側に余白を追加 */
+}
+.curimatch:nth-child(9) {
+    transform: rotate(32deg) translateY(32px);
+}
 
+/* 右側のナビゲーションスタイル */
 .nav-right {
-    margin-left: auto;
-    margin-top: 20px;
-    margin-right: 150px;
-    padding-top: 0px;
-    z-index: 10; /* z-indexを設定して他の要素の上に表示 */
-    position: relative; /* 相対的に配置 */
-    top: -40px; 
+    display: flex;
+    justify-content: flex-end;
+    position: relative; /* 相対位置に設定 */
+    margin-right: 150px; /* 右から150pxの位置に配置 */
+    left: -40px; /* 左に移動 */
+    top: -60px;  /* 上に移動 */
 }
 
 .nav-right ul {
-    display: flex;
+    display: flex; /* リストアイテムをFlexboxで横並びに */
     list-style: none;
     padding: 0;
 }
 
 .nav-right ul li {
-    margin-left: 50px;
+    margin-left: 50px; /* 各リストアイテムの間隔を設定 */
 }
 
 .nav-right ul li a {
@@ -70,82 +102,74 @@ header {
     color: hsl(49, 28%, 44%);
 }
 
-h2 {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    color: #0f0f0f;
-    text-align: left;
-    margin-left: 20px;
-    margin-top: 100px;
-    font-weight: 200;
-    position: relative; /* 通常のフローのまま位置を調整 */
-    top: -80px; 
+
+.login {
+    display: flex; /* Flexboxで横並び */
+    justify-content: flex-end; /* 右に揃える */
+    align-items: flex-end; /* 下端で揃える */
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: -20px;
+    right: -150px;
+}
+.sign-up-container {
+    display: flex; /* Flexboxで横並び */
+    justify-content: flex-start; /* 左揃え */
+    align-items: flex-end; /* 下端で揃える */
+    position: absolute; /* 絶対位置 */
+    font-size: 30px; /* フォントサイズを設定 */
+    right: 450px; /* 右端から20pxの位置 */
+    bottom: 100px;  /* 下端から20pxの位置 */
+
 }
 
-h3 {
-    font-size: 2rem;
-    color: #333;
-    text-align: left;
-    font-weight: 700;
-    margin-left: 130px;
-    margin-top: 20px;
-    position: relative; /* 通常のフローのまま位置を調整 */
-    top: -80px; 
+/* since2024 クラスのスタイル */
+.since2024 {
+    display: flex; /* Flexboxで横並び */
+    justify-content: left; 
+    align-items: flex-end; /* 下端で揃える */
+    position: absolute;
+    font-size: 15px; /* フォントサイズを設定 */
+    left: 80px; /* 左に移動 */
+    top: 80px;  /* 上に移動 */
 }
 
-h4 {
-    font-size: 1rem;
-    color: #555;
-    text-align: left;
-    font-weight: 20;
-    padding: 0;
-    margin-left: 100px;
-    margin-top: 10px;
-    position: relative; /* 通常のフローのまま位置を調整 */
-    top: -60px; /* 上に20px移動 */
-}
-
-h5 {
-    font-size: 1.5rem;
-    color: #555;
-    text-align: right;
-    font-weight: 20;
-    margin-right: 20px;
-    margin-top: 10px;
-    position: relative; /* 通常のフローのまま位置を調整 */
-    top: -350px; /* 上に20px移動 */
-}
-
-h6 {
-    font-size: 1.5rem;
-    color: #555;
-    font-weight: 400; /* 20は不正な値です。通常は400、700など */
-    padding: 0;
-    text-align: center;
-    margin-right: 0; /* 負のマージンを削除 */
-    margin-top: 50px;
-    position: relative; /* 通常のフローのまま位置を調整 */
-    left: 250px; /* 右に500px移動 */
-    top: 50px; /* 上に350px移動 */
-}
-
-.description {
+/* _futures クラスのスタイル */
+.futures-container {
+    display: flex; /* Flexboxで横並び */
+    justify-content: left; 
+    align-items: flex-end; /* 下端で揃える */
     position: relative;
-    line-height: 1.5;
-    margin: 0;
-    padding: 20px;
-    text-align: left;
+    font-size: 15px; /* フォントサイズを設定 */
+    left: 40px; /* 左に移動 */
+    top: 50px;  /* 上に移動 */
+}
+.title {
+    position: absolute;
+    font-size: 30px; /* フォントサイズを設定 */
+    font-weight: bold;
+    left: 170px; /* 左に移動 */
+    top: 10px;  /* 上に移動 */
 }
 
+/* フレックスボックスプロパティを適用するために各見出しにフレックスコンテナを追加 */
+
+/* 説明テキストのスタイル */
+.description {
+    position: absolute; /* 絶対位置指定 */
+    bottom: 200px; /* 下端から20px */
+    right: 150px; /* 右端から20px */
+    text-align: left; /* テキストを左揃え */
+}
+/* 大きな文字のスタイル */
 .text-large {
     font-size: 20px;
     color: #000000;
-    position: absolute;
-    bottom: 150px;
-    right: 150px;
     font-weight: 200;
 }
 
+/* フッターのスタイル */
 footer {
     background-color: #0c0c0c;
     position: fixed;
@@ -158,9 +182,9 @@ footer {
 .footer-text {
     color: #ffffff;
     font-size: 12px;
-    display: inline-block;
-    text-align: center;
 }
+
+/* 特定のテキストを強調表示 */
 .highlight {
     color: red;
 }
