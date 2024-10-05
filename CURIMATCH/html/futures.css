@@ -177,14 +177,34 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+    z-index: 200
 }
 
 .footer-text {
     color: #ffffff;
     font-size: 12px;
+    z-index: 200
+}
+.custom-image {
+    position: relative; /* 絶対位置指定 */
+    bottom: -50px; /* 下端から20px */
+    right: -120px; /* 右端から20px */
+    z-index: 10
 }
 
 /* 特定のテキストを強調表示 */
 .highlight {
     color: red;
+}
+.futures-img {
+    position: relative; /* 絶対位置指定 */
+    bottom: -50px; /* 下端から20px */
+    right: -170px; /* 右端から20px */
+}
+.about-img {
+    position: relative;
+    bottom: -130px;
+    right: -170px;
+    width: 600px; /* 画像の幅を150pxに変更（小さくする） */
+    height: auto; /* 高さを自動で調整してアスペクト比を維持 */
 }
