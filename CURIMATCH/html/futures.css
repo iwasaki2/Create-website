@@ -77,10 +77,9 @@ header {
 .nav-right {
     display: flex;
     justify-content: flex-end;
-    position: relative; /* 相対位置に設定 */
-    margin-right: 150px; /* 右から150pxの位置に配置 */
-    left: -40px; /* 左に移動 */
-    top: -60px;  /* 上に移動 */
+    position:  absolute; /* 相対位置に設定 */
+    left: 700px; /* 左に移動 */
+    top: 60px;  /* 上に移動 */
 }
 
 .nav-right ul {
@@ -110,7 +109,7 @@ header {
     font-size: 25px;
     font-weight: 300;
     position: absolute;
-    top: -20px;
+    top: -50px;
     right: -150px;
 }
 .sign-up-container {
@@ -167,6 +166,18 @@ header {
     font-size: 20px;
     color: #000000;
     font-weight: 200;
+}
+.about-description{
+    position: absolute; /* 絶対位置指定 */
+    bottom: 200px; /* 下端から20px */
+    right: 150px; /* 右端から20px */
+    text-align: left; /* テキストを左揃え */
+}
+.about-text-large{
+    font-size: 20px;
+    color: #000000;
+    font-weight: 200;
+
 }
 
 /* フッターのスタイル */
