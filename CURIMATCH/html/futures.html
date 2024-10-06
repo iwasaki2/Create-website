@@ -41,11 +41,11 @@
         </p>
     </div>
     
-    <div class="sign-up-container">
-        <h5 class="sign-up">SIGN UP</h5>
+    <div class="sign-up-container" onclick="window.location.href='signup-login.html'">
+            <h5 class="sign-up">SIGN UP</h5>
     </div>
     
-    <p class="description text-large">
+    <p class="futures-description futures-text-large">
         Curimatch は、<br>
         未来を担う芸術家とクリエイターの発掘·支援に情熱を注ぎ、<br>
         文化の継承と革新を促進することで、社会に貢献します。<br>
@@ -57,5 +57,12 @@
         <p class="footer-text">&copy; 2024 CURIMATCH. All rights reserved.</p>
     </footer>
     <img src="TATTOO-removebg-preview.png"class="futures-img">
+    <script>
+        // LOGIN/SIGN UP がクリックされた時の処理
+        document.querySelector('.login').addEventListener('click', function() {
+            // signup-login.html という新規登録/ログインのページに移動
+            window.location.href = 'signup-login.html';
+        });
+    </script>
 </body>
 </html>

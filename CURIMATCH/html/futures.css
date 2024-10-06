@@ -78,7 +78,7 @@ header {
     display: flex;
     justify-content: flex-end;
     position:  absolute; /* 相対位置に設定 */
-    left: 700px; /* 左に移動 */
+    left: 600px; /* 左に移動 */
     top: 60px;  /* 上に移動 */
 }
 
@@ -109,8 +109,11 @@ header {
     font-size: 25px;
     font-weight: 300;
     position: absolute;
-    top: -50px;
+    top: -40px;
     right: -150px;
+}
+.login:hover{
+    color: hsl(49, 28%, 44%);
 }
 .sign-up-container {
     display: flex; /* Flexboxで横並び */
@@ -123,10 +126,14 @@ header {
 
 }
 
+.sign-up-container:hover {
+    color: hsl(49, 28%, 44%);
+}
+
 /* since2024 クラスのスタイル */
 .since2024 {
     display: flex; /* Flexboxで横並び */
-    justify-content: left; 
+    justify-content: left;
     align-items: flex-end; /* 下端で揃える */
     position: absolute;
     font-size: 15px; /* フォントサイズを設定 */
@@ -137,7 +144,7 @@ header {
 /* _futures クラスのスタイル */
 .futures-container {
     display: flex; /* Flexboxで横並び */
-    justify-content: left; 
+    justify-content: left;
     align-items: flex-end; /* 下端で揃える */
     position: relative;
     font-size: 15px; /* フォントサイズを設定 */
@@ -155,14 +162,14 @@ header {
 /* フレックスボックスプロパティを適用するために各見出しにフレックスコンテナを追加 */
 
 /* 説明テキストのスタイル */
-.description {
+.futures-description {
     position: absolute; /* 絶対位置指定 */
-    bottom: 200px; /* 下端から20px */
+    bottom: 250px; /* 下端から20px */
     right: 150px; /* 右端から20px */
     text-align: left; /* テキストを左揃え */
 }
 /* 大きな文字のスタイル */
-.text-large {
+.futures-text-large{
     font-size: 20px;
     color: #000000;
     font-weight: 200;
@@ -209,13 +216,13 @@ footer {
 }
 .futures-img {
     position: relative; /* 絶対位置指定 */
-    bottom: -50px; /* 下端から20px */
-    right: -170px; /* 右端から20px */
+    bottom: -60px; /* 下端から20px */
+    right: -110px; /* 右端から20px */
 }
 .about-img {
     position: relative;
     bottom: -130px;
-    right: -170px;
+    right: -110px;
     width: 600px; /* 画像の幅を150pxに変更（小さくする） */
     height: auto; /* 高さを自動で調整してアスペクト比を維持 */
 }
