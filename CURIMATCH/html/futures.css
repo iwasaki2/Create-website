@@ -75,8 +75,6 @@ header {
 
 /* 右側のナビゲーションスタイル */
 .nav-right {
-    display: flex;
-    justify-content: flex-end;
     position:  absolute; /* 相対位置に設定 */
     left: 600px; /* 左に移動 */
     top: 60px;  /* 上に移動 */
@@ -116,9 +114,6 @@ header {
     color: hsl(49, 28%, 44%);
 }
 .sign-up-container {
-    display: flex; /* Flexboxで横並び */
-    justify-content: flex-start; /* 左揃え */
-    align-items: flex-end; /* 下端で揃える */
     position: absolute; /* 絶対位置 */
     font-size: 30px; /* フォントサイズを設定 */
     right: 450px; /* 右端から20pxの位置 */
@@ -132,9 +127,6 @@ header {
 
 /* since2024 クラスのスタイル */
 .since2024 {
-    display: flex; /* Flexboxで横並び */
-    justify-content: left;
-    align-items: flex-end; /* 下端で揃える */
     position: absolute;
     font-size: 15px; /* フォントサイズを設定 */
     left: 80px; /* 左に移動 */
@@ -143,9 +135,6 @@ header {
 
 /* _futures クラスのスタイル */
 .futures-container {
-    display: flex; /* Flexboxで横並び */
-    justify-content: left;
-    align-items: flex-end; /* 下端で揃える */
     position: relative;
     font-size: 15px; /* フォントサイズを設定 */
     left: 40px; /* 左に移動 */
