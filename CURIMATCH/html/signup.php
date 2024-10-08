@@ -1,9 +1,4 @@
 <?php
-// エラーメッセージの表示を有効にする
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 // データベースの接続情報
 $servername = "localhost"; // サーバー名
 $username = "root"; // あなたのMySQLのユーザー名
