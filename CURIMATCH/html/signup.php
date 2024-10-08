@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 // データベースの接続情報
 $servername = "localhost"; // サーバー名
 $username = "root"; // あなたのMySQLのユーザー名
-$password = ""; // あなたのMySQLのパスワード（空白の場合はそのまま）
+$password = "0000"; // あなたのMySQLのパスワード（空白の場合はそのまま）
 $dbname = "curimatch_db"; // 作成したデータベース名
 
 // データベースに接続
@@ -23,19 +23,28 @@ $user = $_POST['username'];
 $email = $_POST['email'];
 $pass = $_POST['password'];
 
-// パスワードをハッシュ化
-$hashed_password = password_hash($pass, PASSWORD_DEFAULT);
+// 既存ユーザーを確認
+$sql_check = "SELECT * FROM users WHERE email='$email'";
+$result = $conn->query($sql_check);
 
-// SQL文を準備
-$sql = "INSERT INTO users (username, email, password) VALUES ('$user', '$email', '$hashed_password')";
-
-// データを挿入
-if ($conn->query($sql) === TRUE) {
-    // 登録成功時に新しいHTMLファイルを表示
-    header('Location: signup.html'); // signup.htmlにリダイレクト
-    exit; // スクリプトの実行を終了
+if ($result->num_rows > 0) {
+    // すでにユーザーが存在する場合、ログインページにリダイレクト
+    header('Location: login.html');
+    exit(); // スクリプトの実行を終了
 } else {
-    echo "エラー: " . $sql . "<br>" . $conn->error; // エラーメッセージを表示
+    // パスワードをハッシュ化
+    $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
+
+    // 新しいユーザーを挿入
+    $sql_insert = "INSERT INTO users (username, email, password) VALUES ('$user', '$email', '$hashed_password')";
+
+    if ($conn->query($sql_insert) === TRUE) {
+        // 登録成功時に登録完了ページへリダイレクト
+        header('Location: login.html'); // signup_success.htmlにリダイレクト
+        exit; // スクリプトの実行を終了
+    } else {
+        echo "エラー: " . $sql_insert . "<br>" . $conn->error; // エラーメッセージを表示
+    }
 }
 
 // 接続を閉じる

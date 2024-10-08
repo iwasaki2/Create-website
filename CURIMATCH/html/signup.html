@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登録完了</title>
-    <link rel="stylesheet" href="style.css"> <!-- スタイルシートがあれば -->
+    <title>Sign Up / Login</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>登録が完了しました！</h1>
-    <p>ご登録いただきありがとうございます。</p>
-    <a href="login.html">ログインページへ</a> <!-- 必要に応じて変更 -->
+    <div class="form-container">
+        <h2>新規登録</h2>
+        <form action="signup.php" method="POST">
+            <label for="username">氏名（フルネーム）:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">パスワード:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">新規登録</button>
+        </form>
+
+        <!-- すでにアカウントをお持ちですか？の項目 -->
+        <p>すでにアカウントをお持ちですか？ <a href="login.html">ログイン</a></p>
+    </div>
 </body>
 </html>

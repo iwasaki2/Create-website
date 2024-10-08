@@ -1,6 +1,6 @@
 <?php
 // データベース接続
-$conn = new mysqli('localhost', 'root', '', 'curimatch_db');
+$conn = new mysqli('localhost', 'root', '0000', 'curimatch_db');
 
 // 接続エラーチェック
 if ($conn->connect_error) {
@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
         // ログイン後の処理 (例: セッションの開始)
         session_start();
         $_SESSION['username'] = $row['username'];
-        header('Location: dashboard.php'); // ログイン成功後にダッシュボードにリダイレクト
+        header('Location: futures.html'); // ログイン成功後にダッシュボードにリダイレクト
     } else {
         echo "Incorrect password.";
     }
