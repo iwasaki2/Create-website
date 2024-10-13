@@ -23,7 +23,8 @@ if ($result->num_rows > 0) {
         // ログイン後の処理 (例: セッションの開始)
         session_start();
         $_SESSION['username'] = $row['username'];
-        header('Location: futures.html'); // ログイン成功後にダッシュボードにリダイレクト
+        header('Location: curimatch_index.html'); // ログイン成功後に新しいページにリダイレクト
+        exit(); // リダイレクト後のコードの実行を防ぐ
     } else {
         echo "Incorrect password.";
     }
