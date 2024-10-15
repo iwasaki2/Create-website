@@ -29,7 +29,7 @@ $result = $conn->query($sql);
             // 各投稿を表示
             while ($row = $result->fetch_assoc()) {
                 echo "<div class='upload-item'>";
-                echo "<h2>説明: " . htmlspecialchars($row['description']) . "</h2>";
+                echo "<h2>" . htmlspecialchars($row['description']) . "</h2>";
                 
                 // メディアが動画か画像かで表示方法を変更
                 if (strpos($row['media_url'], '.mp4') !== false || strpos($row['media_url'], '.webm') !== false) {

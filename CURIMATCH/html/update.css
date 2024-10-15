@@ -63,9 +63,12 @@ input[type="submit"]:hover {
     box-shadow: 0 6px 20px rgba(255, 99, 71, 0.8);
 }
 
+/* プレビューエリアのスタイル */
 #preview {
-    margin-top: 20px;
-}
+    #preview {
+        display: none; /* 初期は非表示 */
+        margin-top: 20px;
+    }
 
 img, video {
     max-width: 100%;

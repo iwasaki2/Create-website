@@ -77,10 +77,13 @@ input[type="submit"]:hover {
 
 .upload-item h2 {
     color: #ffffff; /* 説明の文字色 */
+    padding-left: 20px;
 }
 
 /* 動画と画像のスタイル */
 video, img {
     max-width: 100%; /* 画面幅に応じてサイズを調整 */
+    height: 300px; /* 高さを300pxに固定 */
+    object-fit: contain; /* アスペクト比を保ちながらサイズを調整し、全体を表示 */
     border-radius: 5px; /* 角を丸く */
 }
