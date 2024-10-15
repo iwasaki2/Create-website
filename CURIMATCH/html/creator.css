@@ -1,0 +1,76 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #f0e68c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #ffa500;
+    margin-top: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px #ff4500;
+}
+
+/* 投稿フォームのスタイル */
+form {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(255, 165, 0, 0.5);
+    max-width: 600px;
+    width: 100%;
+    margin-top: 20px;
+    color: #f0e68c;
+}
+
+label {
+    font-size: 18px;
+    color: #ffeb3b;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ffa500;
+    border-radius: 8px;
+    background-color: #333;
+    color: #f0e68c;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #ffa500;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.7);
+}
+
+input[type="submit"]:hover {
+    background-color: #ff6347;
+    box-shadow: 0 6px 20px rgba(255, 99, 71, 0.8);
+}
+
+#preview {
+    margin-top: 20px;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(255, 165, 0, 0.5);
+}

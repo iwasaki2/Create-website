@@ -1,36 +1,41 @@
 <?php
-// データベース接続
-$conn = new mysqli('localhost', 'root', '0000', 'curimatch_db');
-
-// 接続エラーチェック
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+session_start(); // セッションを開始
 
 // フォームからのデータを取得
-$email = $_POST['login_email'];
-$password = $_POST['login_password'];
+$login_email = $_POST['login_email'];
+$login_password = $_POST['login_password'];
 
-// SQLクエリを実行してユーザー情報を取得
-$sql = "SELECT * FROM users WHERE email='$email'";
-$result = $conn->query($sql);
+// データベース接続
+$mysqli = new mysqli('localhost', 'root', '0000', 'curimatch_db');
 
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    // パスワードが一致するか確認
-    if (password_verify($password, $row['password'])) {
-        echo "Login successful!";
-        // ログイン後の処理 (例: セッションの開始)
-        session_start();
-        $_SESSION['username'] = $row['username'];
-        header('Location: curimatch_index.html'); // ログイン成功後に新しいページにリダイレクト
-        exit(); // リダイレクト後のコードの実行を防ぐ
-    } else {
-        echo "Incorrect password.";
-    }
-} else {
-    echo "No user found with that email.";
+// 接続チェック
+if ($mysqli->connect_error) {
+    die('接続エラー: ' . $mysqli->connect_error);
 }
 
-$conn->close();
+// ユーザー情報の取得
+$query = $mysqli->prepare("SELECT id, password FROM users WHERE email = ?");
+$query->bind_param("s", $login_email);
+$query->execute();
+$query->store_result();
+
+// ユーザーが見つかった場合
+if ($query->num_rows > 0) {
+    $query->bind_result($user_id, $hashed_password);
+    $query->fetch();
+
+    // パスワードが正しいか確認
+    if (password_verify($login_password, $hashed_password)) {
+        $_SESSION['user_id'] = $user_id; // セッションにユーザーIDを保存
+        header("Location:upload.html"); // リダイレクト
+        exit();
+    } else {
+        echo "パスワードが間違っています。";
+    }
+} else {
+    echo "そのメールアドレスは登録されていません。";
+}
+
+$query->close();
+$mysqli->close();
 ?>

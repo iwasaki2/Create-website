@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
 
     if ($conn->query($sql_insert) === TRUE) {
         // 登録成功時に登録完了ページへリダイレクト
-        header('Location: login.html'); // signup_success.htmlにリダイレクト
+        header('Location: upload.html'); // signup_success.htmlにリダイレクト
         exit; // スクリプトの実行を終了
     } else {
         echo "エラー: " . $sql_insert . "<br>" . $conn->error; // エラーメッセージを表示
