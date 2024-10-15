@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリエイター投稿ページ</title>
+    <link rel="stylesheet" href="creator.css"> <!-- CSSファイルをリンク -->
+</head>
+<body>
+    <h1>プロジェクトアップロード</h1>
+
+    <!-- ファイルアップロードフォーム -->
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="file-upload">動画や写真を選択してください:</label>
+        <input type="file" id="file-upload" name="media[]" accept="image/*, video/*" multiple required>
+        <br><br>
+
+        <!-- 説明書きの入力欄 -->
+        <label for="description">説明書き:</label>
+        <textarea id="description" name="description" rows="4" cols="50" placeholder="ここに説明を書いてください" required></textarea>
+        <br><br>
+
+        <!-- 投稿ボタン -->
+        <input type="submit" value="投稿する">
+    </form>
+
+    <!-- プレビューエリア -->
+    <div id="preview"></div>
+
+    <script src="update.js"></script> <!-- JavaScriptファイルをリンク -->
+</body>
+</html>
