@@ -41,11 +41,11 @@
     
         <nav class="nav-right">
             <ul>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="futures.html">FUTURES</a></li>
-                <li><a href="service.html">SERVICE</a></li>
-                <li><a href="company.html">COMPANY</a></li>
-                <li><a href="information.html">INFORMATION</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <li><a href="{% url 'futures' %}">FUTURES</a></li>
+                <li><a href="{% url 'service' %}">SERVICE</a></li>
+                <li><a href="{% url 'company' %}">COMPANY</a></li>
+                <li><a href="{% url 'information' %}">INFORMATION</a></li>
             </ul>
         </nav>
     </header>

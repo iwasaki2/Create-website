@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>クリエイター投稿ページ</title>
-    <link rel="stylesheet" href="update.css"> <!-- CSSファイルをリンク -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/update.css' %}"> <!-- 外部CSSファイルの読み込み -->
 </head>
 <body>
     <h1>プロジェクトアップロード</h1>
