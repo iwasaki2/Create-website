@@ -16,8 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from htmlapp.views import index, about, company, futures, information, login, service, signup, upload  # 必要なビューをインポート
-
+from htmlapp.views import index, about, company, futures, information, login, service, signup, upload # 必要なビューをインポート
 urlpatterns = [
     path('admin/', admin.site.urls),  # 管理サイトのURL
     path('', index, name='index'),  # トップページのURL

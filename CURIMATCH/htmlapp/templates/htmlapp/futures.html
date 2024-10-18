@@ -32,6 +32,7 @@
             <li><a href="{% url 'company' %}">COMPANY</a></li>
             <li><a href="{% url 'information' %}">INFORMATION</a></li>
             <h4 class="login">LOGIN/<br>SIGN UP</h4>
+
         </ul>
     </nav>
 
@@ -60,10 +61,8 @@
     <img src="{% static 'images/TATTOO-removebg-preview.png' %}" class="futures-img">
     <script>
         // LOGIN/SIGN UP がクリックされた時の処理
-        document.querySelector('.login').addEventListener('click', function() {
-            // signup-login.html という新規登録/ログインのページに移動
-            window.location.href = 'login.html';
-        });
-    </script>
-</body>
-</html>
+    document.querySelector('.login').addEventListener('click', function() {
+        // ログインページに移動
+        window.location.href = '/login'; // ルートURLに対して相対的に指定
+    });
+</script>

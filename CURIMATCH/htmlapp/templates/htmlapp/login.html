@@ -10,7 +10,9 @@
 <body>
     <div class="form-container">
         <h2>ログイン</h2>
-        <form action="login.php" method="POST">
+        <!-- DjangoのURLリバース機能を使って、POST先のURLを指定 -->
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}  <!-- CSRFトークンを追加 -->
             <label for="login_email">メールアドレス:</label>
             <input type="email" id="login_email" name="login_email" required>
             <label for="login_password">パスワード:</label>
