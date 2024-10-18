@@ -64,10 +64,17 @@ input[type="submit"]:hover {
 }
 
 /* プレビューエリアのスタイル */
-#preview {
+
     #preview {
         display: none; /* 初期は非表示 */
-        margin-top: 20px;
+        flex-wrap: wrap;
+        gap: 10px; /* アイテム間の間隔 */
+        margin-top: 20px; /* 上部に余白を追加 */
+    }
+    .preview-item {
+        position: relative;
+        width: 100px; /* プレビューアイテムのサイズ */
+        height: 100px;
     }
 
 img, video {
@@ -76,4 +83,5 @@ img, video {
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(255, 165, 0, 0.5);
+}
 }
