@@ -41,7 +41,7 @@ def login(request):
     return render(request, 'htmlapp/login.html')
 
 # 新規登録処理
-def signup_view(request):
+def signup(request):  # 関数名をsignupに変更
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
