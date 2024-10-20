@@ -14,11 +14,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import path
-from htmlapp.views import index, about, company, futures, information, login, service, signup, upload # 必要なビューをインポート
+from .views import index, about, company, futures, information, login, service, signup, upload
+
 urlpatterns = [
-    path('admin/', admin.site.urls),  # 管理サイトのURL
     path('', index, name='index'),  # トップページのURL
     path('about/', about, name='about'),  # AboutページのURL
     path('company/', company, name='company'),  # CompanyページのURL
