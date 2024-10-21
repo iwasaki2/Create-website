@@ -28,8 +28,8 @@ def upload(request):
 # ユーザー認証関連
 def login(request):
     if request.method == "POST":
-        login_email = request.POST['login_email']
-        login_password = request.POST['login_password']
+        login_email = request.POST['email']
+        login_password = request.POST['password']
         user = authenticate(request, username=login_email, password=login_password)
 
         if user is not None:
@@ -51,3 +51,4 @@ def signup(request):
         form = SignUpForm()
 
     return render(request, 'htmlapp/signup.html', {'form': form})
+
