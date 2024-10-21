@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリエイター投稿ページ</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/update.css' %}"> <!-- 外部CSSファイルの読み込み -->
+</head>
+<body>
+    <h1>プロジェクトアップロード</h1>
+
+    <!-- ファイルアップロードフォーム -->
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="file-upload">動画や写真を選択してください (1枚まで)</label>
+        <input type="file" id="file-upload" name="media" accept="image/*, video/*" required>
+        <br><br>
+
+        <!-- 説明書きの入力欄 -->
+        <label for="title">タイトルを入力してください</label>
+        <textarea id="title" name="title" rows="4" cols="50" placeholder="ここにタイトルを書いてください" required></textarea>
+        <br><br>
+
+        <label for="overview">プロジェクトの概要</label>
+        <textarea id="overview" name="overview" rows="4" cols="50" placeholder="ここに概要を書いてください" required></textarea>
+        <br><br>
+
+        <label for="content">制作予定の内容</label>
+    <textarea id="content" name="content" rows="4" cols="50" placeholder="制作予定の内容を書いてください" required></textarea>
+    <br>
+    <label for="content-file">制作予定の内容に関連するファイルをアップロード</label>
+    <input type="file" id="content-file" name="content-file" accept="image/*, video/*">
+    <br><br>
+
+        <label for="schedule">制作スケジュールに関する説明</label>
+        <textarea id="schedule" name="schedule" rows="4" cols="50" placeholder="制作スケジュールに関する説明を書いてください" required></textarea>
+        <br>
+        <label for="schedule-file">制作スケジュールに関連するファイルをアップロード</label>
+        <input type="file" id="schedule-file" name="schedule-file" accept="image/*, video/*">
+        <br><br>
+
+    <label for="funding">支援の目的と必要な資金</label>
+    <textarea id="funding" name="funding" rows="4" cols="50" placeholder="支援の目的と必要な資金について書いてください" required></textarea>
+    <br>
+    <label for="funding-file">支援の目的と必要な資金に関連するファイルをアップロード</label>
+    <input type="file" id="funding-file" name="funding-file" accept="image/*, video/*">
+    <br><br>
+
+    <label for="rewards">リターン内容</label>
+    <textarea id="rewards" name="rewards" rows="4" cols="50" placeholder="リターン内容について書いてください" required></textarea>
+    <br>
+    <label for="rewards-file">リターン内容に関連するファイルをアップロード</label>
+    <input type="file" id="rewards-file" name="rewards-file" accept="image/*, video/*">
+    <br><br>
+
+    <label for="achievements">過去の実績や作品例</label>
+    <textarea id="achievements" name="achievements" rows="4" cols="50" placeholder="過去の実績や作品例について書いてください" required></textarea>
+    <br>
+    <label for="achievements-file">過去の実績や作品例に関連するファイルをアップロード</label>
+    <input type="file" id="achievements-file" name="achievements-file" accept="image/*, video/*">
+    <br><br>
+
+    <label for="portfolio">SNSやオンラインポートフォリオのリンク</label>
+    <textarea id="portfolio" name="portfolio" rows="4" cols="50" placeholder="ポートフォリオのリンクを書いてください" required></textarea>
+    <br>
+    <label for="portfolio-file">ポートフォリオに関連するファイルをアップロード</label>
+    <input type="file" id="portfolio-file" name="portfolio-file" accept="image/*, video/*">
+    <br><br>
+
+        <!-- 投稿ボタン -->
+        <input type="submit" value="投稿する">
+    </form>
+
+    <!-- プレビューエリア -->
+    <div id="preview"></div>
+
+    <script src="update.js"></script> <!-- JavaScriptファイルをリンク -->
+</body>
+</html>
