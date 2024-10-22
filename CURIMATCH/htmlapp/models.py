@@ -2,9 +2,15 @@ from django.db import models
 
 # ユーザーモデル (users テーブル)
 class User(models.Model):
+    ROLE_CHOICES = [
+        ('creator', 'クリエイター'),
+        ('sponsor', 'スポンサー'),
+    ]
+
     username = models.CharField(max_length=50)
     email = models.EmailField(max_length=100, unique=True)
     password = models.CharField(max_length=255)
+    role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='creator')
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

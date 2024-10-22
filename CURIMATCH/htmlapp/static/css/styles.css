@@ -19,8 +19,8 @@ form {
     flex-direction: column;
 }
 
-label, input, button {
-    margin-bottom: 10px;
+label, input, button, select {
+    margin-bottom: 15px; /* 各要素の下に15pxのマージンを追加 */
 }
 
 button {

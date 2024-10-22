@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up / Login</title>
-    <link rel="stylesheet" href="../../static/css/styles.css">
+    {% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <div class="form-container">
@@ -31,6 +32,13 @@
 
             <label for="password">パスワード:</label>
             <input type="password" id="password" name="password" required>
+
+            <label for="role">どのように利用しますか？:</label>
+            <select id="role" name="role" required>
+            <option value="creator">クリエイター</option>
+            <option value="sponsor">スポンサー</option>
+            </select>
+
 
             <button type="submit">新規登録</button>
         </form>
