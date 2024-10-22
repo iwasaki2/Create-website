@@ -1,15 +1,14 @@
-# accounts/forms.py
-
 from django import forms
 from .models import User
 from django.contrib.auth.hashers import make_password  # パスワードのハッシュ化に利用
 
 class SignUpForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
+    role = forms.ChoiceField(choices=User.ROLE_CHOICES)
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'password']
+        fields = ['username', 'email', 'password', 'role']
 
     def save(self, commit=True):
         user = super().save(commit=False)
