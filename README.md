@@ -21,6 +21,10 @@
 <img width="1024" alt="image" src="https://github.com/user-attachments/assets/001abd31-7631-4a2b-951c-581d99f1b344">
 
 
+機械として管理できる人は少ない
+
+
+
 
 
 
