@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ボディスタイルの設定 */
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffe6f2;
+    padding: 20px;
+}
+
+/* ヘッダーの設定：Flexboxを使用 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0f0f0f;
+    padding: 20px 40px;
+}
+
+/* ヘッダーコンテナ内の文字を横並びにする設定 */
+.header-container {
+    display: flex; /* Flexboxで横並び */
+    justify-content: center; /* 中央揃え */
+    align-items: flex-end; /* 下端で揃える */
+    position: relative;
+    left: -40px; /* 左に移動 */
+    top: -40px;  /* 上に移動 */
+}
+
+/* curimatchクラスを使って各文字のスタイルを設定 */
+.curimatch {
+    font-size: 2.5rem;
+    margin: 0 0px; /* 文字間のスペースをゼロにする */
+    letter-spacing: -1px; /* 文字同士をさらに詰める */
+    display: inline-block;
+    position: relative;
+    transform-origin: bottom center; /* 各文字が底辺を基準に回転 */
+}
+
+/* 各文字の回転と位置の設定 */
+.curimatch:nth-child(1) {
+    transform: rotate(-25deg) translateY(32px); /* 左端の文字、強く回転し低く配置 */
+    margin-right: 3px; /* 文字の右側に余白を追加 */
+}
+.curimatch:nth-child(2) {
+    transform: rotate(-20deg) translateY(20px); /* 少し少なめの回転と低い配置 */
+}
+.curimatch:nth-child(3) {
+    transform: rotate(-15deg) translateY(10px); /* 中央に近づくにつれ回転が小さく */
+}
+.curimatch:nth-child(4) {
+    transform: rotate(-10deg) translateY(5px); /* 軽い回転で少し上 */
+}
+.curimatch:nth-child(5) {
+    transform: rotate(0deg) translateY(4px); /* "M" は中央で回転なし */
+}
+.curimatch:nth-child(6) {
+    transform: rotate(8deg) translateY(5px); /* 左側と対称に設定 */
+}
+.curimatch:nth-child(7) {
+    transform: rotate(14deg) translateY(10px); /* 回転が少し大きくなり、位置も下がる */
+}
+.curimatch:nth-child(8) {
+    transform: rotate(20deg) translateY(18px);
+    margin-right: 3px; /* 8番目の文字の右側に余白を追加 */
+}
+.curimatch:nth-child(9) {
+    transform: rotate(32deg) translateY(32px);
+}
+
+/* 右側のナビゲーションスタイル */
+.nav-right {
+    position:  absolute; /* 相対位置に設定 */
+    left: 600px; /* 左に移動 */
+    top: 60px;  /* 上に移動 */
+}
+
+.nav-right ul {
+    display: flex; /* リストアイテムをFlexboxで横並びに */
+    list-style: none;
+    padding: 0;
+}
+
+.nav-right ul li {
+    margin-left: 50px; /* 各リストアイテムの間隔を設定 */
+}
+
+.nav-right ul li a {
+    color: #0f0f0f;
+    text-decoration: none;
+}
+
+.nav-right ul li a:hover {
+    color: hsl(49, 28%, 44%);
+}
+
+
+.login {
+    display: flex; /* Flexboxで横並び */
+    justify-content: flex-end; /* 右に揃える */
+    align-items: flex-end; /* 下端で揃える */
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: -40px;
+    right: -150px;
+}
+.login:hover{
+    color: hsl(49, 28%, 44%);
+}
+.sign-up-container {
+    position: absolute; /* 絶対位置 */
+    font-size: 30px; /* フォントサイズを設定 */
+    right: 450px; /* 右端から20pxの位置 */
+    bottom: 100px;  /* 下端から20pxの位置 */
+
+}
+
+.sign-up-container:hover {
+    color: hsl(49, 28%, 44%);
+}
+
+/* since2024 クラスのスタイル */
+.since2024 {
+    position: absolute;
+    font-size: 15px; /* フォントサイズを設定 */
+    left: 80px; /* 左に移動 */
+    top: 80px;  /* 上に移動 */
+}
+
+/* _futures クラスのスタイル */
+.futures-container {
+    position: relative;
+    font-size: 15px; /* フォントサイズを設定 */
+    left: 40px; /* 左に移動 */
+    top: 50px;  /* 上に移動 */
+}
+.title {
+    position: absolute;
+    font-size: 30px; /* フォントサイズを設定 */
+    font-weight: bold;
+    left: 170px; /* 左に移動 */
+    top: 10px;  /* 上に移動 */
+}
+
+/* フレックスボックスプロパティを適用するために各見出しにフレックスコンテナを追加 */
+
+/* 説明テキストのスタイル */
+.futures-description {
+    position: absolute; /* 絶対位置指定 */
+    bottom: 250px; /* 下端から20px */
+    right: 150px; /* 右端から20px */
+    text-align: left; /* テキストを左揃え */
+}
+/* 大きな文字のスタイル */
+.futures-text-large{
+    font-size: 20px;
+    color: #000000;
+    font-weight: 200;
+}
+.about-description{
+    position: absolute; /* 絶対位置指定 */
+    bottom: 200px; /* 下端から20px */
+    right: 150px; /* 右端から20px */
+    text-align: left; /* テキストを左揃え */
+}
+.about-text-large{
+    font-size: 20px;
+    color: #000000;
+    font-weight: 200;
+
+}
+
+/* フッターのスタイル */
+footer {
+    background-color: #0c0c0c;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 200
+}
+
+.footer-text {
+    color: #ffffff;
+    font-size: 12px;
+    z-index: 200
+}
+.custom-image {
+    position: relative; /* 絶対位置指定 */
+    bottom: -50px; /* 下端から20px */
+    right: -120px; /* 右端から20px */
+    z-index: 10
+}
+
+/* 特定のテキストを強調表示 */
+.highlight {
+    color: red;
+}
+.futures-img {
+    position: relative; /* 絶対位置指定 */
+    bottom: -60px; /* 下端から20px */
+    right: -110px; /* 右端から20px */
+}
+.about-img {
+    position: relative;
+    bottom: -130px;
+    right: -110px;
+    width: 600px; /* 画像の幅を150pxに変更（小さくする） */
+    height: auto; /* 高さを自動で調整してアスペクト比を維持 */
+}
