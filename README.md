@@ -1,3 +1,25 @@
+# CURIMATCH
+
+CURIMATCHは、Djangoを用いて開発されたWebアプリケーションです。ユーザーが感情に寄り添う体験を得られることを目的としています。
+
+## 特徴
+
+- ユーザー登録およびログイン機能
+- 音声インタラクションを活用したユーザー体験
+- シンプルで使いやすいUI/UX
+
+## 技術スタック
+
+- Python 3.x
+- Django 3.x
+- HTML/CSS/JavaScript
+- Docker
+
+## セットアップ
+
+1. リポジトリをクローンします：
+
+
 まず制作側のアピールページ　企画書をあげれるようにする
 スポンサーはその企画書などを簡単にみれるようにする(動画？か静止画かわ決めてない)
 取引画面(法の問題はこれから調べる)
@@ -23,31 +45,7 @@
 
 機械として管理できる人は少ない
 
-CURIMATCH/
-├── manage.py             # Djangoの管理スクリプト
-├── db.sqlite3            # SQLiteデータベースファイル
-├── requirements.txt      # 使用するPythonライブラリ
-├── Dockerfile            # Docker環境構築用のファイル
-├── curimatch_project/    # Djangoプロジェクトの設定
-│   ├── settings.py
-│   ├── urls.py
-│   └── views.py
-└── htmlapp/              # Djangoアプリケーション
-    ├── models.py
-    ├── views.py
-    ├── urls.py
-    ├── forms.py
-    ├── admin.py
-    ├── templates/
-    │   └── htmlapp/
-    │       ├── index.html
-    │       ├── login.html
-    │       ├── signup.html
-    │       └── その他のHTMLテンプレート
-    └── static/
-        ├── css/
-        ├── images/
-        └── script.js
+
 
 
 
