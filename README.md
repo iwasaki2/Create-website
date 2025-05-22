@@ -23,7 +23,31 @@
 
 機械として管理できる人は少ない
 
-
+CURIMATCH/
+├── manage.py             # Djangoの管理スクリプト
+├── db.sqlite3            # SQLiteデータベースファイル
+├── requirements.txt      # 使用するPythonライブラリ
+├── Dockerfile            # Docker環境構築用のファイル
+├── curimatch_project/    # Djangoプロジェクトの設定
+│   ├── settings.py
+│   ├── urls.py
+│   └── views.py
+└── htmlapp/              # Djangoアプリケーション
+    ├── models.py
+    ├── views.py
+    ├── urls.py
+    ├── forms.py
+    ├── admin.py
+    ├── templates/
+    │   └── htmlapp/
+    │       ├── index.html
+    │       ├── login.html
+    │       ├── signup.html
+    │       └── その他のHTMLテンプレート
+    └── static/
+        ├── css/
+        ├── images/
+        └── script.js
 
 
 
