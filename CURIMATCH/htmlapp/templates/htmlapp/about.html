@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTURES - CURIMATCH</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/futures.css' %}"> <!-- 外部CSSファイルの読み込み -->
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <span class="curimatch">C</span>
+            <span class="curimatch">U</span>
+            <span class="curimatch">R</span>
+            <span class="curimatch">I</span>
+            <span class="curimatch">M</span>
+            <span class="curimatch">A</span>
+            <span class="curimatch">T</span>
+            <span class="curimatch">C</span>
+            <span class="curimatch">H</span>
+            <h2 class="since2024">since 2024</h2>
+            </div>
+
+        </div>
+    </header>
+    <nav class="nav-right">
+        <ul>
+            <li><a href="{% url 'about' %}">ABOUT</a></li>
+            <li><a href="{% url 'futures' %}">FUTURES</a></li>
+            <li><a href="{% url 'service' %}">SERVICE</a></li>
+            <li><a href="{% url 'company' %}">COMPANY</a></li>
+            <li><a href="{% url 'information' %}">INFORMATION</a></li>
+            <h4 class="login">LOGIN/<br>SIGN UP</h4>
+        </ul>
+    </nav>
+    
+    <div class="futures-container">
+        <h3 class="futures">_ABOUT US</h3>
+        <p class="title">
+            クリエイターと<br>支援者の出会いの場…
+        </p>
+    </div>
+    
+    <div class="sign-up-container">
+        <h5 class="sign-up">SIGN UP</h5>
+    </div>
+    <p  class="about-description about-text-large">
+        Curimatchは、<br>
+        クリエイターと支援者を繋ぐ、新しいサービスです。<br>    
+        クリエイターを目指す学生や、駆け出しのクリエイターは<br>
+        支援者と出会うことができ、制作の資金調達を行えます。<br>
+        支援者の方は新しい才能を支援(投資)し、<br>
+        リターンを得ることができます。  
+</p>         
+<footer>
+    <p class="footer-text">&copy; 2024 CURIMATCH. All rights reserved.</p>
+</footer>
+<img src="{% static 'images/a6ea13bd0686b462c672aafa2cd1658e-edited.jpg' %}" class="about-img">
+<script>
+    // LOGIN/SIGN UP がクリックされた時の処理
+    document.querySelector('.login').addEventListener('click', function() {
+        // signup-login.html という新規登録/ログインのページに移動
+        window.location.href = 'login.html';
+    });

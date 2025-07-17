@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFORMATION - CURIMATCH</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffe6f2;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #0f0f0f;
+            padding: 20px 40px;
+        }
+        .header-container {
+            flex: 1;
+            position: relative;
+        }
+        .curimatch {
+            font-size: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .curimatch:nth-child(1) { top: 0px; left: -48px; }
+        .curimatch:nth-child(2) { top: -8px; left: -53px; }
+        .curimatch:nth-child(3) { top: -15px; left: -58px; }
+        .curimatch:nth-child(4) { top: -20px; left: -60px; }
+        .curimatch:nth-child(5) { top: -25px; left: -62px; }
+        .curimatch:nth-child(6) { top: -20px; left: -63px; }
+        .curimatch:nth-child(7) { top: -15px; left: -67px; }
+        .curimatch:nth-child(8) { top: -10px; left: -71px; }
+        .curimatch:nth-child(9) { top: 0px; left: -76px; }
+        
+        .nav-right {
+            margin-left: auto; /* 右寄せ */
+            margin-top: -50px; /* 上下の位置を調整 */
+            margin-right: 150px; /* 右側の余白を追加 */
+            padding-top: 0px; /* 上側の余白を追加 */
+        }
+        .nav-right ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        .nav-right ul li {
+            margin-left: 50px;
+        }
+        .nav-right ul li a {
+            color: #0f0f0f;
+            text-decoration: none;
+        }
+        .nav-right ul li a:hover {
+            color: hsl(49, 28%, 44%);
+        }
+        footer {
+            background-color: #1f1f1f;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>       
+        <div class="header-container">
+            <span class="curimatch" style="transform: rotate(-25deg);">C</span>
+            <span class="curimatch" style="transform: rotate(-20deg);">U</span>
+            <span class="curimatch" style="transform: rotate(-15deg);">R</span>
+            <span class="curimatch" style="transform: rotate(-10deg);">I</span>
+            <span class="curimatch" style="top: -22px;">M</span> <!-- Mを一番上に配置 -->
+            <span class="curimatch" style="transform: rotate(6deg);">A</span>
+            <span class="curimatch" style="transform: rotate(15deg);">T</span>
+            <span class="curimatch" style="transform: rotate(20deg);">C</span>
+            <span class="curimatch" style="transform: rotate(25deg);">H</span>
+        </div>
+
+        <nav class="nav-right">
+            <ul>
+                <li><a href="index.html">ABOUT</a></li>
+                <li><a href="futures.html">FUTURES</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="company.html">COMPANY</a></li>
+                <li><a href="information.html">INFORMATION</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>INFORMATION</h2>
+    <p>ここにINFORMATIONの内容を追加します。</p>
+
+    <footer>
+        <p>&copy; 2024 CURIMATCH. All rights reserved.</p>
+    </footer>
+</body>
+</html>
